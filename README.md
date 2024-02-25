@@ -1,4 +1,4 @@
-How to use:
+## How to use:
 
 1.Select "generate-password.ps1"(above this text), "save file as..."
 
@@ -12,7 +12,7 @@ Runs fully locally. The XAML is not a URL, is a "namespace identifier and doesn'
 
 Based code on https://github.com/asm-code/powershell-password-generator, heavily modified:
 
-## Fuctions:
+## Functions:
 
 Copying generated password by just selecting the password
 
