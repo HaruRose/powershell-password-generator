@@ -133,9 +133,6 @@ $SpecialChars = $MainWindow.FindName("SpecialChars")
 $NoEndDigit = $MainWindow.FindName("NoEndDigit")
 $NoRepeat = $MainWindow.FindName("NoRepeat")
 
-# Create the settings file name based on the script name
-$SettingsFile = ".\$($MyInvocation.MyCommand.Name -replace '\.[^.]*$', 'Settings.json')"
-
 
 #Add OnClick Click Event to the "Generate" Button
 $Generate.Add_Click({
@@ -162,18 +159,11 @@ $MainWindow.Add_Loaded({
     $Passwords = Generate-Password -UpperCase:$UpperCase.IsChecked -LowerCase:$LowerCase.IsChecked -Digits:$Digits.IsChecked -SpecialChars:$SpecialChars.IsChecked -NoEndDigit:$NoEndDigit.IsChecked -NoRepeat:$NoRepeat.IsChecked -Length $Length.Text -Count $Count.Text
     $Passwords | ForEach-Object { $Result.Items.Add($_) }
 })
-if (Test-Path $SettingsFile) {
-    $Settings = Get-Content $SettingsFile | ConvertFrom-Json
-    $Length.Text = $Settings.Length
-    $Count.Text = $Settings.Count
-    $UpperCase.IsChecked = $Settings.UpperCase
-    $LowerCase.IsChecked = $Settings.LowerCase
-    $Digits.IsChecked = $Settings.Digits
-    $SpecialChars.IsChecked = $Settings.SpecialChars
-    $NoEndDigit.IsChecked = $Settings.NoEndDigit
-    $NoRepeat.IsChecked = $Settings.NoRepeat
-}
-# Save settings to a hidden JSON file
+
+# Create the settings file name in the AppData directory
+$SettingsFile = "$env:APPDATA\PasswordGeneratorSettings.json" # New line
+
+# Save settings to a JSON file
 function Save-Settings {
     $Settings = @{
         Length = $Length.Text
@@ -186,20 +176,24 @@ function Save-Settings {
         NoRepeat = $NoRepeat.IsChecked
     }
     $Settings | ConvertTo-Json | Set-Content $SettingsFile
-
-    # Ensure the file is hidden
-    Set-ItemProperty -Path $SettingsFile -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
 }
 
-# Then, call Save-Settings whenever a setting is modified
-$Length.Add_TextChanged({Save-Settings})
-$Count.Add_TextChanged({Save-Settings})
-$UpperCase.Add_Click({Save-Settings})
-$LowerCase.Add_Click({Save-Settings})
-$Digits.Add_Click({Save-Settings})
-$SpecialChars.Add_Click({Save-Settings})
-$NoEndDigit.Add_Click({Save-Settings})
-$NoRepeat.Add_Click({Save-Settings})
+# Load settings from the JSON file if it exists
+if (Test-Path $SettingsFile) {
+    $Settings = Get-Content $SettingsFile | ConvertFrom-Json
+    $Length.Text = $Settings.Length
+    $Count.Text = $Settings.Count
+    $UpperCase.IsChecked = $Settings.UpperCase
+    $LowerCase.IsChecked = $Settings.LowerCase
+    $Digits.IsChecked = $Settings.Digits
+    $SpecialChars.IsChecked = $Settings.SpecialChars
+    $NoEndDigit.IsChecked = $Settings.NoEndDigit
+    $NoRepeat.IsChecked = $Settings.NoRepeat
+}
 
+# Add a Closing event to the main window
+$MainWindow.Add_Closing({
+    Save-Settings
+})
 
 $MainWindow.ShowDialog() | Out-Null
