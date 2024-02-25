@@ -2,7 +2,9 @@
 
 1.Using the .exe -  right click, "save link as..."
 
-2. Using the powershell: right click, "Password Generator.ps1"(above this text), "save link as..."
+### or
+
+1. Using the powershell: right click, "Password Generator.ps1"(above this text), "save link as..."
 
 2. In file explorer, right click file -> "Open with..."
 
@@ -19,17 +21,17 @@ Based code on https://github.com/asm-code/powershell-password-generator, heavily
 
 (Copied) Checkmarks for A-Z a-z 0-9.
 
-Copying generated password by just selecting the password
+Copying generated password by just selecting (clicking) the password.
 
-Remembering settings and saving them in a .json file in the same folder.
+Remembering settings and saving them in a .json file in appdata - by default, in folder path %appdata%..
 
-Automatically generate passwords when app is loaded
+Automatically generate passwords when starting the app.
 
-Password never ends in special character or number(for Active Directory AD)
+Password never ends in special character or number(for Active Directory AD).
 
-Checkmark for Special characters, checkmark for "Don't end with 0-9 and Special"
+Checkmark for Special characters, checkmark for "Don't end with 0-9 and Special".
 
-Passwords do not include hard to distinguish characters(0,O,o,I,l,1,0)
+Passwords do not include hard to distinguish characters(0,O,o,I,l,1,0).
 
 Checkmark & function for characters not to repeat or double.
 
@@ -39,4 +41,4 @@ Various checks for scenarios that would crash the app(different checks - only se
 
 Function & checkmark for "Don't repeat consecutively".
 
-Made into an executable(ps2exe)
+### Now available as an executable(ps2exe), that *works*.
