@@ -1,6 +1,6 @@
 ## How to use:
 
-1. Using the [executable: Right click above or to here, "save link as..."](https://github.com/HaruRose/powershell-password-generator/blob/5da1210393af9b697e81170eeec48588e0d1a840/Password%20Generator.exe)
+1. Using the [executable: Right click .exe above or this link, "save link as..."](https://github.com/HaruRose/powershell-password-generator/blob/5da1210393af9b697e81170eeec48588e0d1a840/Password%20Generator.exe)
 
 ### or
 
