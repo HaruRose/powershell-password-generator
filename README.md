@@ -15,10 +15,26 @@ Based code on https://github.com/asm-code/powershell-password-generator, heavily
 
 ## Functions:
 
+(Copied) Checkmarks for A-Z a-z 0-9.
+
 Copying generated password by just selecting the password
 
-Remembering settings and saving them in a .json file
+Remembering settings and saving them in a .json file in the same folder.
 
 Automatically generate passwords when app is loaded
 
 Password never ends in special character or number(for Active Directory AD)
+
+Checkmark for Special characters, checkmark for "Don't end with 0-9 and Special"
+
+Passwords do not include hard to distinguish characters(0,O,o,I,l,1,0)
+
+Checkmark & function for characters not to repeat or double.
+
+Clicked passwords turn Orange. 
+
+Various checks for scenarios that would crash the app(different checks - only selecting Numbers 0-9 and "dont end with 0-9", length, validity etc.. these were a pain to solve)
+
+Function & checkmark for "Don't repeat consecutively".
+
+Made into an executable
