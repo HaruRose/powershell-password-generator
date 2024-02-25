@@ -37,4 +37,4 @@ Various checks for scenarios that would crash the app(different checks - only se
 
 Function & checkmark for "Don't repeat consecutively".
 
-Made into an executable
+Made into an executable(ps2exe)
