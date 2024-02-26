@@ -1,15 +1,16 @@
+![image](https://github.com/HaruRose/powershell-password-generator/assets/161178913/1821fdb2-77d0-4ad5-8024-2187fbdc1011)
+
 ## How to use:
 
-1. Using the [executable: Right click .exe above or this link, "save link as..."](https://github.com/HaruRose/powershell-password-generator/blob/5da1210393af9b697e81170eeec48588e0d1a840/Password%20Generator.exe)
+1. Using the [executable: download location on "releases" tab, click here](https://github.com/HaruRose/powershell-password-generator/releases/tag/download) 
 
 ### or
 
-1. Using the powershell: right click, "Password Generator.ps1"(above this text), "save link as..."
+1. Using the powershell: Left click on the above this text .ps1 file or [here at releases page](https://github.com/HaruRose/powershell-password-generator/releases/tag/download), copy-paste the code in a .ps1 file or "download raw code".
 
-2. In file explorer, right click file -> "Open with..."
+2. In Windows file explorer, right click file -> "Open with..." "Choose another app.."
 
-3. More apps -> Look for another app on this PC.. Select powershell from powershell windows location (path in Windows 10: C:\Windows\System32\WindowsPowerShell\v1.0 ) & check "Always use this app [..] for .ps1 files"
-
+3. More apps -> Look for another app on this PC.. Select powershell from powershell windows location (C:\Windows\System32\WindowsPowerShell\v1.0 ) & check "Always use this app [..] for .ps1 files"
 
 
 ## Functions:
