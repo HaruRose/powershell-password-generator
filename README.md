@@ -1,4 +1,4 @@
-![image](https://github.com/HaruRose/powershell-password-generator/assets/161178913/1821fdb2-77d0-4ad5-8024-2187fbdc1011)
+![image](https://github.com/HaruRose/powershell-password-generator/assets/161178913/41998291-3055-4eda-a168-01189dcf0a14)
 
 ## How to use:
 
@@ -19,7 +19,7 @@ Fully open-source (un) secure password generator.
 
 Fully local.( XAML is not a URL, is a "namespace identifier and doesn't involve any network access". )
 
-(Copied) Checkmarks for A-Z a-z 0-9.
+(Copied) CCheckmark:  A-Z, a-z, 0-9.
 
 Copying generated password by just selecting (clicking) the password.
 
@@ -27,18 +27,19 @@ Remembering settings and saving them in a .json file in appdata - by default, in
 
 Automatically generate passwords when starting the app.
 
-Password never ends in special character or number(for Active Directory AD).
+Checkmark: never ends in special character or number(for Active Directory AD).
 
-Checkmark & function: "Don't repeat consecutively" (double characters). 
+Checkmark:: "Don't repeat consecutively" (double characters). 
 
-Checkmark for Special characters, checkmark for "Don't end with 0-9 and Special".
+Checkmark: Special characters, checkmark for "Don't end with 0-9 and Special".
 
-Passwords do not include hard to distinguish characters(0,O,o,I,l,1,0).
+Checkmark: Passwords do not include hard to distinguish characters(0,O,o,I,l,1,0).
 
 Clicked passwords turn Orange. 
 
-Various checks for scenarios that would crash the app(different checks - only selecting Numbers 0-9 and "dont end with 0-9", length, validity etc.. these were a pain to solve)
+Clicked passwords are automatically copied to the clipboard
 
+Various checks for scenarios that would crash the app(different checks - only selecting Numbers 0-9 and "dont end with 0-9", length, validity, no more than 5000 passwords or characters - last one is so you don't freeze the application for no reason. These were a pain to solve.
 
 
 ### Now available as an executable(ps2exe), that *works*.
