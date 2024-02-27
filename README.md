@@ -19,13 +19,10 @@ Fully open-source (un) secure password generator.
 
 Fully local.( XAML is not a URL, is a "namespace identifier and doesn't involve any network access". )
 
-(Copied) CCheckmark:  A-Z, a-z, 0-9.
-
-Copying generated password by just selecting (clicking) the password.
+(Copied) Checkmark:  A-Z, a-z, 0-9.
 
 Remembering settings and saving them in a .json file in appdata - by default, in folder path %appdata%..
 
-Automatically generate passwords when starting the app.
 
 Checkmark: never ends in special character or number(for Active Directory AD).
 
@@ -35,13 +32,16 @@ Checkmark: Special characters, checkmark for "Don't end with 0-9 and Special".
 
 Checkmark: Passwords do not include hard to distinguish characters(0,O,o,I,l,1,0).
 
+Checkmark: Don't repeat/double the same character consecutively.
+
 Clicked passwords turn Orange. 
 
 Clicked passwords are automatically copied to the clipboard
 
-Various checks for scenarios that would crash the app(different checks - only selecting Numbers 0-9 and "dont end with 0-9", length, validity, no more than 5000 passwords or characters - last one is so you don't freeze the application for no reason. These were a pain to solve.
+Automatically generate passwords when starting the app.
 
+Various checks for scenarios that would crash the app(different checks - only selecting Numbers 0-9 and "dont end with 0-9", length, validity, no more than 5000 passwords or characters - last one is so you don't freeze the application for no reason. These were a pain to solve.
 
 ### Now available as an executable(ps2exe), that *works*.
 
-### Based on https://github.com/asm-code/powershell-password-generator, heavily modified:
+Based on https://github.com/asm-code/powershell-password-generator, heavily modified:
